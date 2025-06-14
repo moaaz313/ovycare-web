@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Team OvyCare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #dfe9f3, #e0c3fc);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        color: #fff;
+    }
+
+    .container {
+        text-align: center;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .logo {
+        width: 150px;
+        margin-bottom: 1.5rem;
+        animation: scaleIn 1s ease-in-out forwards;
+    }
+
+    .title {
+        font-size: 3.2rem;
+        color: #2c3e50;
+        margin-bottom: 2rem;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: slideIn 1s ease-in-out forwards;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    .team-card {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        opacity: 0;
+        transform: scale(0.9);
+        animation: popIn 0.8s ease-in-out forwards;
+        animation-delay: calc(0.2s * var(--i, 0));
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 3px solid #b388eb;
+    }
+
+    .team-card h3 {
+        font-size: 1.5rem;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+    }
+
+    .team-card p {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+
+    .social-links a {
+        display: inline-block;
+        margin: 0 0.5rem;
+        color: #6c63ff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+        color: #e91e63;
+        transform: translateY(-3px);
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes popIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes scaleIn {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .logo {
+            width: 100px;
+        }
+
+        .title {
+            font-size: 2.2rem;
+        }
+
+        .team-card {
+            max-width: 100%;
+        }
+
+        .team-card img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .team-card h3 {
+            font-size: 1.3rem;
+        }
+
+        .team-card p {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <img src="Splash__1_-removebg-preview.png" alt="OvyCare Logo" class="logo">
+        <h1 class="title">Team OvyCare</h1>
+        <div class="team-grid">
+            <div class="team-card" style="--i: 1">
+                <img src="moaaz.jpg" alt="Moaaz Ahmed">
+                <h3>Moaaz Ahmed</h3>
+                <p>Mobile Application Developer</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/moaaz-ahmed-a0a060265/">LinkedIn</a>
+                    <a href="https://linktr.ee/moaaz29">Linktree</a>
+                    <a href="#">CV</a>
+                </div>
+            </div>
+            <div class="team-card" style="--i: 2">
+                <img src="dohaa.png" alt="Dohaa Ayman">
+                <h3>Dohaa Ayman</h3>
+                <p>Mobile Application Developer</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/dohaa-ayman-3673832b1/">LinkedIn</a>
+                    <a href="https://dohaaymann.github.io/#/">Protofolio</a>
+                    <a href="#">CV</a>
+                </div>
+            </div>
+            <div class="team-card" style="--i: 3">
+                <img src="5938285160443267467.jpg" alt="Ahmed Essam">
+                <h3>Ahmed Essam</h3>
+                <p>Data Analyst</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ahmed-essam-34083625a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+                    <a href="#">Linktree</a>
+                    <a href="#">CV</a>
+                </div>
+            </div>
+            <div class="team-card" style="--i: 4">
+                <img src="israa.png" alt="Israa Ehab">
+                <h3>Israa Ehab</h3>
+                <p>ML Engineer</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/israa-ehab-8563a2197/">LinkedIn</a>
+                    <a href="#">Linktree</a>
+                    <a href="#">CV</a>
+                </div>
+            </div>
+            <div class="team-card" style="--i: 5">
+                <img src="yasser.png" alt="Ahmed Yasser">
+                <h3>Ahmed Yasser</h3>
+                <p>Data Scientist</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ahmedyassertaha/">LinkedIn</a>
+                    <a href="https://linktr.ee/ahmedyassertaha">Linktree</a>
+                    <a href="#">CV</a>
+                </div>
+            </div>
+            <div class="team-card" style="--i: 6">
+                <img src="https://via.placeholder.com/100" alt="Nourhan Mohamed">
+                <h3>Nourhan Mohamed</h3>
+                <p>Backend Developer</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/noor-mohamed-492291266/">LinkedIn</a>
+                    <a href="#">Linktree</a>
+                    <a href="#">CV</a>
+                </div>
+            </div>
+            <div class="team-card" style="--i: 7">
+                <img src="https://via.placeholder.com/100" alt="Ream Hatem">
+                <h3>Ream Hatem</h3>
+                <p>ML Engineer</p>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Linktree</a>
+                    <a href="#">CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
